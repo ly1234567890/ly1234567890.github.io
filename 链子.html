@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        canvas {
+            border: 1px solid red;
+        }
+    </style>
+</head>
+<body>
+<canvas id="myCanvas" width="1100" height="1100"></canvas>
+</body>
+</html>
+<script src="链子.js"></script>
+<script>
+    var canvas = document.getElementById("myCanvas");
+    var contex = canvas.getContext("2d");
+    //    在这些个属性中bigX和bigY和bigRadius是必须与的属性
+    //    而小圆半径和起始角度可以不写，不写时指定一个默认值
+    //    bigX, bigY, bigRadius,smallRadius,num,beginRadian
+//    var obj = {
+//        bigX: 300,
+//        bigY: 300,
+//        bigRadius: 100,
+////        smallRadius:20,
+//        num: 5
+////        beginRadian:0
+//    };
+    //    var chain=new Chain(obj);
+
+
+
+
+for(var j=0;j<5;j++){
+    for(var i=0;i<5;i++){
+        var bigRadius=80;
+        var bigX=100+i*(2*bigRadius+52);
+        var bigY=100+j*(2*bigRadius+52);
+
+        var obj = {
+            bigRadius:  bigRadius,
+            bigX: bigX,
+            bigY: bigY,
+            smallRadius:10,
+            num: 3+i+5*j
+
+        };
+        var chain = new Chain(obj);
+    }
+}
+
+    console.log(typeof null);
+
+</script>
+
